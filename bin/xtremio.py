@@ -154,6 +154,7 @@ def do_run():
                 endpoints = replaceTokens(original_endpoint, req_args)
 
             for endpoint in endpoints:
+                logging.debug("endpoint: %s" % endpoint )
 
                 try:
                     r = requests.get(endpoint, **req_args)

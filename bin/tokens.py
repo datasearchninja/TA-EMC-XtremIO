@@ -31,9 +31,16 @@ def get_ids(raw_string, req_args):
         json_types = r.json()
         if name in ["ig-folders", "volume-folders"]:
             name = "folders"
+        if name in ["clusters"]:
+            sysname="name"
+        else:
+            sysname="sys-name"
         children = json_types[name]
         for child in children:
-            endpoints.add(child['href'])
+            logging.debug("href: %s" % child['href'])
+            logging.debug("sys-name: %s" % child[sysname])
+            url=child['href'] + "?cluster-name=" + child[sysname]
+            endpoints.add(url)
     except requests.exceptions.HTTPError, e:
         logging.error("HTTP Request error: %s" % str(e))
 
