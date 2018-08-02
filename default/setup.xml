@@ -1,0 +1,21 @@
+<setup>
+  <block title="XtremIO Configuration" endpoint="xtremiocustom/xtremioendpoint" entity="*">
+      
+      <input field="host">
+        <label>Host</label>
+        <type>text</type>
+      </input>
+
+      <input field="username">
+        <label>Username</label>
+        <type>text</type>
+      </input>
+
+      <input field="password">
+        <label>Password</label>
+        <type>password</type>
+      </input>
+
+  </block>
+
+</setup>
