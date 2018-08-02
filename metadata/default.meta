@@ -33,20 +33,3 @@ export = system
 [viewstates]
 access = read : [ * ], write : [ * ]
 export = system
-
-[props/emc%3Axtremio%3Arest/EXTRACT-component_name]
-access = read : [ * ], write : [ * ]
-export = system
-owner = admin
-version = 6.2.2
-
-[]
-access = read : [ * ], write : [ admin, power ]
-export = system
-version = 6.2.2
-
-
-[indexes/xtremio]
-version = 6.2.2
-owner = admin
-
